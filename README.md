@@ -129,8 +129,8 @@ In root project select Build Settings --> Build Options --> Debug Information is
 | volumeDown | `number` |     |             |
 | repeat | `boolean` |     |             |
 | muted | `boolean` |     |             |
-| hwDecoderForced | `number` |  `0 | 1` | (Only android) need use with hwDecoderForced |
-| hwDecoderEnabled | `number` |  `0 | 1`   | Only android) need use with hwDecoderEnabled |
+| hwDecoderForced | `number` |  `0, 1` | (Only android) need use with hwDecoderForced |
+| hwDecoderEnabled | `number` |  `0, 1`   | Only android) need use with hwDecoderEnabled |
 | style | `ViewStyle` |     |             |
 | onVideoLoadStart | `func` |     |             |
 | onVideoStateChange | `func` |     |             |
@@ -139,7 +139,7 @@ In root project select Build Settings --> Build Options --> Debug Information is
 | onIsPlaying | `func` |     |             |
 | onOpen | `func` |     |             |
 | onLoadStart | `func` |     |             |
-| source | `oject | number` |     |             |
+| source | `oject, number` |     |             |
 | play | `func` |     |             |
 | snapshot | `func` |     |             |
 | onError | `func` |     |             |
@@ -162,7 +162,7 @@ In root project select Build Settings --> Build Options --> Debug Information is
 |----------|:----:|:-------:|-------------|
 | style | `ViewStyle` |         |         |
 | initPaused | `boolean` | false |  |
-| source | `oject | number` |  | `{ uri: 'http:...' }` |
+| source | `oject, number` |  | `{ uri: 'http:...' }` |
 | seek | `number` | 0 |  |
 | playInBackground | `boolean` | false |  |
 | isAd | `boolean` | false |  |
