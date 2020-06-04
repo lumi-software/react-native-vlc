@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "@lumi/react-native-vlc"
+  s.name         = "react-native-vlc"
   s.version      = "1.0.0"
   s.summary      = "VLC player"
   s.requires_arc = true
