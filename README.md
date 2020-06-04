@@ -32,7 +32,7 @@ npm install @lumi/react-native-vlc
 
 * **Pre 0.60**
 
-> Run `react-native link react-native-vlcplayer`
+> Run `react-native link @lumi/react-native-vlc`
 
 
 ## ios
