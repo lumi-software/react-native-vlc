@@ -15,7 +15,8 @@
     "mp4",
     "react-native-vlc",
     "rtsp",
-    "lumi"
+    "lumi",
+    "vlc-player"
   ],
   "author": "nghinv@lumi.biz",
   "types": "react-native-vlc.d.ts",
