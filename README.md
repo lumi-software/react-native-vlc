@@ -115,7 +115,7 @@ In root project select Build Settings --> Build Options --> Debug Information is
 
 
 | Property | Type | Default | Description |
-|----------|------|---------|-------------|
+|----------|:----:|:-------:|-------------|
 | rate | `number` |         |             |
 | seek | `number` |         |             |
 | resume | `boolean` |      |             |
@@ -159,7 +159,7 @@ In root project select Build Settings --> Build Options --> Debug Information is
 
 
 | Property | Type | Default | Description |
-|----------|------|---------|-------------|
+|----------|:----:|:-------:|-------------|
 | style | `ViewStyle` |         |         |
 | initPaused | `boolean` | false |  |
 | source | `oject | number` |  | `{ uri: 'http:...' }` |

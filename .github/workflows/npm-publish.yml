@@ -16,6 +16,6 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       # Publish to GitHub Packages
-      - run: npm publish --access public
+      - run: npm publish
         env: # More info about the environment variables in the README
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
