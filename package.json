@@ -1,0 +1,36 @@
+{
+  "name": "@lumi/react-native-vlc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vlc",
+    "player",
+    "android",
+    "ios",
+    "react-native",
+    "mp4",
+    "react-native-vlc",
+    "rtsp",
+    "lumi"
+  ],
+  "author": "nghinv@lumi.biz",
+  "type": "react-native-vlc.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lumi-software/react-native-vlc.git"
+  },
+  "dependencies": {
+    "react-native-slider": "^0.11.0",
+    "react-native-vector-icons": "^6.6.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lumi-software/react-native-vlc/issues"
+  },
+  "homepage": "https://github.com/lumi-software/react-native-vlc#readme",
+  "devDependencies": {}
+}
