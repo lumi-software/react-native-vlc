@@ -18,7 +18,7 @@
     "lumi"
   ],
   "author": "nghinv@lumi.biz",
-  "type": "react-native-vlc.d.ts",
+  "types": "react-native-vlc.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/lumi-software/react-native-vlc.git"
