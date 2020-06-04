@@ -1,4 +1,4 @@
-# @lumi/react-native-vlc
+# @nghinv/react-native-vlc
 
 A `VLCPlayer` component for react-native
 project clone from `react-native-yz-vlcplayer`
@@ -10,13 +10,13 @@ project clone from `react-native-yz-vlcplayer`
 * Use yarn
 
 ```sh
-yarn add @lumi/react-native-vlc
+yarn add @nghinv/react-native-vlc
 ```
 
 * Use npm
 
 ```sh
-npm install @lumi/react-native-vlc
+npm install @nghinv/react-native-vlc
 ```
 
 ### Dependencies
@@ -32,7 +32,7 @@ npm install @lumi/react-native-vlc
 
 * **Pre 0.60**
 
-> Run `react-native link @lumi/react-native-vlc`
+> Run `react-native link @nghinv/react-native-vlc`
 
 
 ## ios
@@ -67,7 +67,7 @@ In root project select Build Settings --> Build Options --> Debug Information is
 # Example
 
 ```javascript
-  (1) import { VLCPlayer, VlCPlayerView } from '@lumi/react-native-vlc';
+  (1) import { VLCPlayer, VlCPlayerView } from '@nghinv/react-native-vlc';
 
   (2) 
     <VLCPlayer
@@ -111,7 +111,8 @@ In root project select Build Settings --> Build Options --> Debug Information is
 
 # Property
 
-## VLCPlayer component
+### VLCPlayer component
+
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
@@ -154,7 +155,8 @@ In root project select Build Settings --> Build Options --> Debug Information is
 | rotation | `number` |     |             |
 
 
-## VlCPlayerView component
+### VlCPlayerView component
+
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
@@ -190,6 +192,8 @@ In root project select Build Settings --> Build Options --> Debug Information is
 | onReplayPress | `func` |  |  |
 | BackHandle |  | `undefined` | BackAndroid |
 | Orientation |  | `undefined` | `react-native-orientation-locker` |
+
+
 
 # Supported formats
 

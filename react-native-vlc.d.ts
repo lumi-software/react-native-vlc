@@ -3,7 +3,7 @@
  * Copyright (c) 2020 nghinv@lumi.biz
  */
 
-declare module '@lumi/react-native-vlc' {
+declare module '@nghinv/react-native-vlc' {
   import { PureComponent } from 'react';
   import { ViewStyle } from 'react-native';
 
