@@ -114,7 +114,7 @@ In root project select Build Settings --> Build Options --> Debug Information is
 ## VLCPlayer component
 
 | Property | Type | Default | Description |
-|----------|------|---------|-------------|
+|----------|:----:|:-------:|-------------|
 | rate | `number` |         |             |
 | seek | `number` |         |             |
 | resume | `boolean` |      |             |
@@ -157,11 +157,11 @@ In root project select Build Settings --> Build Options --> Debug Information is
 ## VlCPlayerView component
 
 | Property | Type | Default | Description |
-|----------|------|---------|-------------|
+|----------|:----:|:-------:|-------------|
 | style | `ViewStyle` |         |         |
 | videoStyle | `ViewStyle` |         |         |
 | initPaused | `boolean` | false |  |
-| source | `oject | number` |  | `{ uri: 'http:...' }` |
+| source | `oject, number` |  | `{ uri: 'http:...' }` |
 | seek | `number` | 0 |  |
 | playInBackground | `boolean` | false |  |
 | isAd | `boolean` | false |  |
