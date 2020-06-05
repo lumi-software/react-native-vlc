@@ -23,6 +23,7 @@ export default class CommonVideo extends Component {
     super(props);
     this.url = '';
     this.initialHeight = 200;
+    this.initialWidth = deviceWidth;
 
     this.state = {
       isEndAd: false,
@@ -105,8 +106,12 @@ export default class CommonVideo extends Component {
       this.initialHeight = style.height;
     }
 
+    if (style && style.width && !isNaN(style.width)) {
+      this.initialWidth = style.width;
+    }
+
     this.setState({
-      currentVideoAspectRatio: deviceWidth + ":" + this.initialHeight,
+      currentVideoAspectRatio: this.initialWidth + ":" + this.initialHeight,
     });
   }
 
@@ -119,7 +124,7 @@ export default class CommonVideo extends Component {
 
   _closeFullScreen = () => {
     const { closeFullScreen, BackHandle, Orientation } = this.props;
-    this.setState({ isFull: false, currentVideoAspectRatio: deviceWidth + ":" + this.initialHeight, });
+    this.setState({ isFull: false, currentVideoAspectRatio: this.initialWidth + ":" + this.initialHeight, });
 
     BackHandle && BackHandle.removeBackFunction(_fullKey);
     Orientation && Orientation.lockToPortrait();
@@ -129,7 +134,7 @@ export default class CommonVideo extends Component {
 
   _toFullScreen = () => {
     const { startFullScreen, BackHandle, Orientation } = this.props;
-    this.setState({ isFull: true, currentVideoAspectRatio: deviceHeight + ":" + deviceWidth, });
+    this.setState({ isFull: true, currentVideoAspectRatio: deviceHeight + ":" + deviceWidth });
 
     StatusBar.setHidden(true);
     BackHandle && BackHandle.addBackFunction(_fullKey, this._closeFullScreen);

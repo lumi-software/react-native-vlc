@@ -72,6 +72,8 @@ declare module '@nghinv/react-native-vlc' {
 
     style: ViewStyle;
 
+    videoStyle: ViewStyle;
+
     // default false
     initPaused: boolean;
 
@@ -147,6 +149,14 @@ declare module '@nghinv/react-native-vlc' {
     onGoLivePress: () => void;
 
     onReplayPress: () => void;
+
+    onVLCProgress: () => void;
+
+    onVLCEnded: () => void;
+
+    onVLCError: () => void;
+
+    onVLCBuffering: () => void;
 
     BackHandle: BackHandle;
 

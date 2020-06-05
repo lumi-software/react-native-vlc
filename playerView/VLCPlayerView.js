@@ -54,7 +54,8 @@ export default class VLCPlayerView extends Component {
     showLeftButton: true,
     showMiddleButton: true,
     showRightButton: true,
-    animationLayout: true
+    animationLayout: true,
+    videoAspectRatio: '16:9'
   };
 
   componentDidMount() {
@@ -100,7 +101,8 @@ export default class VLCPlayerView extends Component {
       showMiddleButton,
       showRightButton,
       errorTitle,
-      animationLayout
+      animationLayout,
+      videoStyle
     } = this.props;
     const { isLoading, loadingSuccess, showControls, isError } = this.state;
 
@@ -135,7 +137,7 @@ export default class VLCPlayerView extends Component {
     return (
       <TouchableOpacity
         activeOpacity={1}
-        style={[styles.videoBtn, style]}
+        style={[styles.videoBtn, style, videoStyle]}
         onPressOut={() => {
           let currentTime = new Date().getTime();
           if (this.touchTime === 0) {
@@ -293,6 +295,8 @@ export default class VLCPlayerView extends Component {
    * @param event
    */
   onBuffering(event) {
+    const { onVLCBuffering } = this.props;
+    onVLCBuffering && onVLCBuffering();
     this.setState({
       isLoading: true,
       isError: false,
@@ -325,6 +329,9 @@ export default class VLCPlayerView extends Component {
 
   _onError = e => {
     console.log('_onError', e);
+    const { onVLCError } = this.props;
+
+    onVLCError && onVLCError();
     this.reloadSuccess = false;
     this.setState({
       isError: true,
@@ -380,8 +387,11 @@ export default class VLCPlayerView extends Component {
    * @param event
    */
   onProgress(event) {
+    const { onVLCProgress } = this.props;
     const currentTime = event.currentTime;
     let loadingSuccess = false;
+
+    onVLCProgress && onVLCProgress();
     if (currentTime > 0 || this.state.currentTime > 0) {
       loadingSuccess = true;
     }
@@ -407,8 +417,11 @@ export default class VLCPlayerView extends Component {
     console.log('onEnded ---------->')
     console.log(event)
     console.log('<---------- onEnded ')
-    let { currentTime, totalTime } = this.state;
-    let { onEnd, isAd } = this.props;
+    const { currentTime, totalTime } = this.state;
+    const { onEnd, isAd, onVLCEnded } = this.props;
+
+    onVLCEnded && onVLCEnded();
+
     if (((currentTime + 5) >= totalTime && totalTime > 0) || isAd) {
       this.setState({ paused: true }, () => {
         if (!this.isEnding) {

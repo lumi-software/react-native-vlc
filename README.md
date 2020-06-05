@@ -39,6 +39,8 @@ npm install @nghinv/react-native-vlc
 
 * **With autolinking (react-native 0.60+)**
 
+> Run `cd ios && pod install`
+
 * **Pre 0.60**
 
 Use framework
@@ -71,51 +73,48 @@ In root project select Build Settings --> Build Options --> Debug Information is
 
   (2) 
     <VLCPlayer
-           ref={ref => (this.vlcPlayer = ref)}
-           style={[styles.video]}
-           videoAspectRatio="16:9"
-           paused={this.state.paused}
-           source={{ uri: this.props.uri}}
-           onProgress={this.onProgress.bind(this)}
-           onEnd={this.onEnded.bind(this)}
-           onBuffering={this.onBuffering.bind(this)}
-           onError={this._onError}
-           onStopped={this.onStopped.bind(this)}   
-           onPlaying={this.onPlaying.bind(this)}
-           onPaused={this.onPaused.bind(this)}      
-       />
+      ref={ref => (this.vlcPlayer = ref)}
+      style={[styles.video]}
+      videoAspectRatio="16:9"
+      paused={this.state.paused}
+      source={{ uri: this.props.uri}}
+      onProgress={this.onProgress.bind(this)}
+      onEnd={this.onEnded.bind(this)}
+      onBuffering={this.onBuffering.bind(this)}
+      onError={this._onError}
+      onStopped={this.onStopped.bind(this)}   
+      onPlaying={this.onPlaying.bind(this)}
+      onPaused={this.onPaused.bind(this)}      
+    />
   (3) or use
     <VlCPlayerView
-           autoplay={false}
-           url={this.state.url}
-           Orientation={Orientation}      
-           BackHandle={BackHandle}
-           ggUrl=""
-           showGG={true}
-           showTitle={true}
-           title=""
-           showBack={true}
-           onLeftPress={()=>{}}
-           startFullScreen={() => {      
-              this.setState({
-              isFull: true,
-             });
-           }}
-           closeFullScreen={() => {
-              this.setState({
-              isFull: false,
-             });
-           }}
-       />
+      autoplay={false}
+      url={this.state.url}
+      Orientation={Orientation}      
+      BackHandle={BackHandle}
+      showTitle={true}
+      title=""
+      showBack={true}
+      onLeftPress={()=>{}}
+      startFullScreen={() => {      
+        this.setState({
+        isFull: true,
+        });
+      }}
+      closeFullScreen={() => {
+        this.setState({
+        isFull: false,
+        });
+      }}
+    />
 ```
 
 # Property
 
-### VLCPlayer component
-
+## VLCPlayer component
 
 | Property | Type | Default | Description |
-|----------|:----:|:-------:|-------------|
+|----------|------|---------|-------------|
 | rate | `number` |         |             |
 | seek | `number` |         |             |
 | resume | `boolean` |      |             |
@@ -155,14 +154,14 @@ In root project select Build Settings --> Build Options --> Debug Information is
 | rotation | `number` |     |             |
 
 
-### VlCPlayerView component
-
+## VlCPlayerView component
 
 | Property | Type | Default | Description |
-|----------|:----:|:-------:|-------------|
+|----------|------|---------|-------------|
 | style | `ViewStyle` |         |         |
+| videoStyle | `ViewStyle` |         |         |
 | initPaused | `boolean` | false |  |
-| source | `oject, number` |  | `{ uri: 'http:...' }` |
+| source | `oject | number` |  | `{ uri: 'http:...' }` |
 | seek | `number` | 0 |  |
 | playInBackground | `boolean` | false |  |
 | isAd | `boolean` | false |  |
@@ -190,10 +189,12 @@ In root project select Build Settings --> Build Options --> Debug Information is
 | onLeftPress | `func` |  |  |
 | onGoLivePress | `func` |  |  |
 | onReplayPress | `func` |  |  |
+| onVLCProgress | `func` |  |  |
+| onVLCEnded | `func` |  |  |
+| onVLCError | `func` |  |  |
+| onVLCBuffering | `func` |  |  |
 | BackHandle |  | `undefined` | BackAndroid |
 | Orientation |  | `undefined` | `react-native-orientation-locker` |
-
-
 
 # Supported formats
 
