@@ -102,7 +102,8 @@ export default class VLCPlayerView extends Component {
       showRightButton,
       errorTitle,
       animationLayout,
-      videoStyle
+      videoStyle,
+      otherProps,
     } = this.props;
     const { isLoading, loadingSuccess, showControls, isError } = this.state;
 
@@ -153,6 +154,7 @@ export default class VLCPlayerView extends Component {
           }
         }}>
         <VLCPlayer
+          {...otherProps}
           ref={ref => (this.vlcPlayer = ref)}
           paused={this.state.paused}
           style={[styles.video]}
