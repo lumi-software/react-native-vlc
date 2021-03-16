@@ -103,7 +103,7 @@ export default class VLCPlayerView extends Component {
       errorTitle,
       animationLayout,
       videoStyle,
-      otherProps,
+      ...otherProps
     } = this.props;
     const { isLoading, loadingSuccess, showControls, isError } = this.state;
 
@@ -311,9 +311,9 @@ export default class VLCPlayerView extends Component {
   }
 
   bufferIntervalFunction = () => {
-    console.log('bufferIntervalFunction');
     const currentTime = new Date().getTime();
     const diffTime = currentTime - this.bufferTime;
+    console.log('bufferIntervalFunction');
     if (diffTime > 1000) {
       clearInterval(this.bufferInterval);
       this.setState({

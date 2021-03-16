@@ -36,6 +36,18 @@ declare module '@nghinv/react-native-vlc' {
     repeat: boolean;
     muted: boolean;
 
+    initType: 1 | 2;
+
+    // [
+    //   '--no-audio',
+    //   '--rtsp-tcp',
+    //   `--network-caching=${150}`,
+    //   `--rtsp-caching=${150}`,
+    //   '--no-stats',
+    //   `--tcp-caching=${150}`,
+    //   `--realrtsp-caching=${150}`,
+    // ]
+    initOptions: Array<String>;
     hwDecoderEnabled: number;
     hwDecoderForced: number;
 
