@@ -162,6 +162,10 @@ declare module '@nghinv/react-native-vlc' {
 
     onReplayPress: () => void;
 
+    onVLCPlaying: () => void;
+
+    onVLCPaused: () => void;
+
     onVLCProgress: () => void;
 
     onVLCEnded: () => void;

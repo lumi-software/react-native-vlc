@@ -274,6 +274,8 @@ export default class VLCPlayerView extends Component {
    * @param event
    */
   onPlaying(event) {
+    const { onVLCPlaying } = this.props;
+    onVLCPlaying && onVLCPlaying(event);
     this.isEnding = false;
     if (this.state.paused) {
       this.setState({ paused: false });
@@ -285,6 +287,8 @@ export default class VLCPlayerView extends Component {
    * @param event
    */
   onPaused(event) {
+    const { onVLCPaused } = this.props;
+    onVLCPaused && onVLCPaused(event);
     if (!this.state.paused) {
       this.setState({ paused: true, showControls: true });
     } else {
