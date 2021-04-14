@@ -40,11 +40,12 @@ RCT_EXPORT_VIEW_PROPERTY(snapshotPath, NSString);
  RCT_EXPORT_VIEW_PROPERTY(onVideoError, RCTBubblingEventBlock);
  RCT_EXPORT_VIEW_PROPERTY(onVideoOpen, RCTBubblingEventBlock);
  */
-RCT_EXPORT_VIEW_PROPERTY(onVideoLoadStart, RCTBubblingEventBlock);
-RCT_EXPORT_VIEW_PROPERTY(onVideoProgress, RCTBubblingEventBlock);
-RCT_EXPORT_VIEW_PROPERTY(onSnapshot, RCTBubblingEventBlock);
-RCT_EXPORT_VIEW_PROPERTY(onIsPlaying, RCTBubblingEventBlock);
-RCT_EXPORT_VIEW_PROPERTY(onVideoStateChange, RCTBubblingEventBlock);
+//bugfix cfr. https://github.com/react-native-video/react-native-video/issues/1850
+RCT_EXPORT_VIEW_PROPERTY(onVideoLoadStart, RCTDirectEventBlock);
+RCT_EXPORT_VIEW_PROPERTY(onVideoProgress, RCTDirectEventBlock);
+RCT_EXPORT_VIEW_PROPERTY(onSnapshot, RCTDirectEventBlock);
+RCT_EXPORT_VIEW_PROPERTY(onIsPlaying, RCTDirectEventBlock);
+RCT_EXPORT_VIEW_PROPERTY(onVideoStateChange, RCTDirectEventBlock);
 
 
 + (BOOL)requiresMainQueueSetup
