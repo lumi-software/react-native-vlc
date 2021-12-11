@@ -1,6 +1,6 @@
 {
   "name": "@nghinv/react-native-vlc",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -35,8 +35,6 @@
   "homepage": "https://github.com/lumi-software/react-native-vlc#readme",
   "devDependencies": {},
   "publishConfig": {
-    "cache": "~/.npm",
-    "registry": "https://npm.pkg.github.com",
     "access": "public"
   }
 }

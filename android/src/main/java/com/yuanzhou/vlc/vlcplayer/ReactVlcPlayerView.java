@@ -37,7 +37,7 @@ import java.util.ArrayList;
 class ReactVlcPlayerView extends TextureView implements
         LifecycleEventListener,
         TextureView.SurfaceTextureListener,
-        AudioManager.OnAudioFocusChangeListener{
+        AudioManager.OnAudioFocusChangeListener {
 
     private static final String TAG = "ReactVlcPlayerView";
     private final String tag = "ReactVlcPlayerView";
